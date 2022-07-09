@@ -5,6 +5,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import java.io.Serializable;
+
 public class Main2PersistEntity {
 
     public static void main(String[] args) {
