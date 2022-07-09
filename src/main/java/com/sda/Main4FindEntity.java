@@ -6,6 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import java.util.Optional;
+
 public class Main4FindEntity {
 
     public static void main(String[] args) {
@@ -33,6 +35,9 @@ public class Main4FindEntity {
         } catch (ObjectNotFoundException e) {
             System.out.println("Nie ma krotki o podanym id");
         }
+
+        Optional<Dog> dog4 = Optional.ofNullable(session.find(Dog.class, 4L));
+        dog4.map(Dog::getName).ifPresent(System.out::println);
 
         transaction.commit();
         session.close();
