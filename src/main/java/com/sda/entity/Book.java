@@ -14,9 +14,9 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String name;
+    String name; // Ogniem i mieczem
     @ManyToOne
-    Client client; // client_id
+    Client client;
 
     public Book(String name) {
         this.name = name;
