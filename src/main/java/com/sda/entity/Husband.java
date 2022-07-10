@@ -17,7 +17,7 @@ public class Husband {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
     Wife wife; // na podstawie tego pola jest mapowana relacja
 
     public Husband(String name) {
