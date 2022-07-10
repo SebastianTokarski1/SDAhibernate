@@ -21,4 +21,8 @@ public class Student {
     public Student(String name) {
         this.name = name;
     }
+
+    public void addSchool(School school) {
+        this.schools.add(school);
+    }
 }

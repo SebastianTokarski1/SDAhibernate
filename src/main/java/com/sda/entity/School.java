@@ -15,10 +15,15 @@ public class School {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
-    @ManyToMany
+    @ManyToMany(mappedBy = "schools", cascade = CascadeType.PERSIST)
     Set<Student> students = new HashSet<>();
 
     public School(String name) {
         this.name = name;
+    }
+
+    public void addStudent(Student student) {
+        students.add(student);
+        student.addSchool(this);
     }
 }
