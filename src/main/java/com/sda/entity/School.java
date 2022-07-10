@@ -1,5 +1,6 @@
 package com.sda.entity;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -10,6 +11,7 @@ import java.util.Set;
 @Entity
 @Table(name = "school")
 @NoArgsConstructor
+@Getter
 @ToString(exclude = "students")
 public class School {
 
@@ -17,7 +19,10 @@ public class School {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
-    @ManyToMany(mappedBy = "schools", cascade = CascadeType.PERSIST)
+    @ManyToMany(
+            mappedBy = "schools",
+            cascade = CascadeType.PERSIST,
+            fetch = FetchType.EAGER)
     Set<Student> students = new HashSet<>();
 
     public School(String name) {

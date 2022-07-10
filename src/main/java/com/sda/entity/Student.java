@@ -1,6 +1,7 @@
 package com.sda.entity;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -11,6 +12,7 @@ import java.util.Set;
 @Entity
 @Table(name = "student")
 @NoArgsConstructor
+@Getter
 @ToString
 public class Student {
 
