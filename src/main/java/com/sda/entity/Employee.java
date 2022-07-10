@@ -22,7 +22,7 @@ public class Employee {
     @Column(name = "password")
     String secret;
     @Column(length = 9, unique = true)
-    String telephoneNumber; // telephone_number
+    String telephoneNumber;
     @Transient
     Long age;
     @Temporal(TemporalType.DATE)

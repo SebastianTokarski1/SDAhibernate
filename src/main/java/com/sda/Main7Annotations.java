@@ -1,6 +1,5 @@
 package com.sda;
 
-import com.sda.HibernateUtils;
 import com.sda.entity.Employee;
 import com.sda.entity.Gender;
 import org.hibernate.Session;
