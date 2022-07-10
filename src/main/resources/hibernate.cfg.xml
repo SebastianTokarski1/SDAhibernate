@@ -11,5 +11,6 @@
         <property name="use.sql_comments">true</property>
         <mapping class="com.sda.entity.Dog"/>
         <mapping class="com.sda.entity.Employee"/>
+        <mapping class="com.sda.entity.Cat"/>
     </session-factory>
 </hibernate-configuration>
