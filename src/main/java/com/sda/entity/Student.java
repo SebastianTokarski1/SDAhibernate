@@ -16,6 +16,11 @@ public class Student {
     Long id;
     String name;
     @ManyToMany
+    @JoinTable(
+            name = "student_school",
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "school_id")
+    )
     Set<School> schools = new HashSet<>();
 
     public Student(String name) {
