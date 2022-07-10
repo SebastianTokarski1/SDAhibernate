@@ -1,5 +1,6 @@
 package com.sda;
 
+import com.sda.entity.Bird;
 import com.sda.entity.Cat;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -14,6 +15,7 @@ public class Main8Uuid {
         Transaction transaction = session.beginTransaction();
 
         session.persist(new Cat("Garfield"));
+        session.persist(new Bird("Pusia"));
 
         transaction.commit();
         session.close();
